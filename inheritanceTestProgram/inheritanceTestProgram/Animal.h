@@ -4,14 +4,17 @@
 class Animal
 {
 public:
-	enum class Gender { Male, Female, Unknown };
-	
+	enum class Gender { eMale, eFemale, eUnknown };
+
 	Animal();
 	~Animal();
 
-private:
-	double age;
-	const Animal::Gender mGender;
+protected:
+	double m_age;
+	int m_color;
+	Animal::Gender m_gender;
+
+	void die();
 };
 
 #endif // Animal_h__
