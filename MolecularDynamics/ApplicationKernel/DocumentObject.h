@@ -1,22 +1,16 @@
 #ifndef DocumentObject_h__
 #define DocumentObject_h__
 
-
-#ifdef DOCUMENTOBJECT_EXPORTS
-#define DOCUMENTOBJECT_DLL __declspec(dllexport)
-#else
-#define DOCUMENTOBJECT_DLL __declspec(dllimport)
-#endif
-
 #include <memory>
 #include <list>
 #include "SceneObject.h"
+#include "ApplicationKernelCommon.h"
 
-class DocumentObject
+class APPKERNEL_DLL DocumentObject
 {
 public:
 	DocumentObject();
-	virtual ~DocumentObject() = 0;
+	virtual ~DocumentObject();
 	virtual void add(std::shared_ptr<DocumentObject> pDocObj) = 0;
 	virtual void remove(std::shared_ptr<DocumentObject> pDocObj) = 0;
 	virtual void getChild(int) = 0;

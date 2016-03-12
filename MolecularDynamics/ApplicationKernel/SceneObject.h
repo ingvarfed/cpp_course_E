@@ -1,24 +1,18 @@
 #ifndef SceneObject_h__
 #define SceneObject_h__
 
-
-#ifdef SCENEOBJECT_EXPORTS
-#define SCENEOBJECT_DLL __declspec(dllexport)
-#else
-#define SCENEOBJECT_DLL __declspec(dllimport)
-#endif
-
 #include <memory>
 #include "DocumentObject.h"
+#include "ApplicationKernelCommon.h"
 
 class DocumentObject;
 
-class SceneObject
+class APPKERNEL_DLL SceneObject
 {
 public:
 	SceneObject();
-	~SceneObject();
-	void draw();
+	virtual ~SceneObject();
+	virtual void draw(DocumentObject obj) = 0;
 	std::weak_ptr<DocumentObject> pDocObj;
 };
 

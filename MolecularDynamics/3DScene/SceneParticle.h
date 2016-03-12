@@ -1,16 +1,10 @@
 #ifndef SceneParticle_h__
 #define SceneParticle_h__
 
+#include "SceneObject.h"
+#include "DSceneCommon.h"
 
-#ifdef SCENEPARTICLE_EXPORTS
-#define SCENEPARTICLE_DLL __declspec(dllexport)
-#else
-#define SCENEPARTICLE_DLL __declspec(dllimport)
-#endif
-
-#include "Scene.h"
-class SceneParticle :
-	public Scene
+class DSCENE_DLL SceneParticle : public SceneObject
 {
 public:
 	SceneParticle();

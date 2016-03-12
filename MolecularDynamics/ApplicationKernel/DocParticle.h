@@ -1,16 +1,10 @@
 #ifndef DocParticle_h__
 #define DocParticle_h__
 
-
-#ifdef DOCPARTICLE_EXPORTS
-#define DOCPARTICLE_DLL __declspec(dllexport)
-#else
-#define DOCPARTICLE_DLL __declspec(dllimport)
-#endif
-
 #include "DocumentObject.h"
+#include "ApplicationKernelCommon.h"
 
-class DocParticle : public DocumentObject
+class APPKERNEL_DLL DocParticle : public DocumentObject
 {
 public:
 	DocParticle();

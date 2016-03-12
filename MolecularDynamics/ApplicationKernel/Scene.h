@@ -1,18 +1,15 @@
 #ifndef Scene_h__
 #define Scene_h__
 
+#include "ApplicationKernelCommon.h"
+#include "DocumentObject.h"
 
-#ifdef SCENE_EXPORTS
-#define SCENE_DLL __declspec(dllexport)
-#else
-#define SCENE_DLL __declspec(dllimport)
-#endif
-
-class Scene
+class APPKERNEL_DLL Scene
 {
 public:
 	Scene();
-	~Scene();
+	virtual ~Scene();
+	virtual void draw(DocumentObject obj) = 0;
 };
 
 #endif // Scene_h__

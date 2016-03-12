@@ -1,16 +1,10 @@
 #ifndef DocProjectObject_h__
 #define DocProjectObject_h__
 
-
-#ifdef DOCPROJECTOBJECT_EXPORTS
-#define DOCPROJECTOBJECT_DLL __declspec(dllexport)
-#else
-#define DOCPROJECTOBJECT_DLL __declspec(dllimport)
-#endif
-
 #include "DocumentObject.h"
+#include "ApplicationKernelCommon.h"
 
-class DocProjectObject : public DocumentObject
+class APPKERNEL_DLL DocProjectObject : public DocumentObject
 {
 public:
 	DocProjectObject();

@@ -1,17 +1,10 @@
 #ifndef SceneBoundingBox_h__
 #define SceneBoundingBox_h__
 
+#include "SceneObject.h"
+#include "DSceneCommon.h"
 
-#ifdef SCENEBOUNDINGBOX_EXPORTS
-#define SCENEBOUNDINGBOX_DLL __declspec(dllexport)
-#else
-#define SCENEBOUNDINGBOX_DLL __declspec(dllimport)
-#endif
-
-#include "Scene.h"
-
-class SceneBoundingBox :
-	public Scene
+class DSCENE_DLL SceneBoundingBox : public SceneObject
 {
 public:
 	SceneBoundingBox();

@@ -1,16 +1,10 @@
 #ifndef SceneAxes_h__
 #define SceneAxes_h__
 
+#include "DSceneCommon.h"
+#include "SceneObject.h"
 
-#ifdef SCENEAXES_EXPORTS
-#define SCENEAXES_DLL __declspec(dllexport)
-#else
-#define SCENEAXES_DLL __declspec(dllimport)
-#endif
-
-#include "Scene.h"
-class SceneAxes :
-	public Scene
+class DSCENE_DLL SceneAxes : public SceneObject
 {
 public:
 	SceneAxes();

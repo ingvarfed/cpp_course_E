@@ -2,15 +2,10 @@
 #define DocBoundingBox_h__
 
 
-#ifdef DOCBOUNDINGBOX_EXPORTS
-#define DOCBOUNDINGBOX_DLL __declspec(dllexport)
-#else
-#define DOCBOUNDINGBOX_DLL __declspec(dllimport)
-#endif
-
 #include "DocumentObject.h"
+#include "ApplicationKernelCommon.h"
 
-class DocBoundingBox : public DocumentObject
+class APPKERNEL_DLL DocBoundingBox : public DocumentObject
 {
 public:
 	DocBoundingBox();
